@@ -6,21 +6,6 @@ STRING powershell
 ENTER
 DELAY 1000
 
-
-STRING $url = "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64"
-ENTER
-STRING $output = "$env:USERPROFILE\Downloads\DiscordSetup.exe"
-ENTER
-STRING $destination = "$env:USERPROFILE\Downloads"
-ENTER
-STRING (New-Object System.Net.WebClient).DownloadFile($url, $output)
-ENTER
-DELAY 1000
-STRING Set-Location -Path $destination
-ENTER
-STRING Start-Process -FilePath ".\DiscordSetup.exe"
-ENTER
-
 STRING $url = "https://downloads.sourceforge.net/project/orwelldevcpp/Setup%20Releases/Dev-Cpp%205.11%20TDM-GCC%204.9.2%20Setup.exe?ts=gAAAAABnBfLXH4yE3EovzXcH9mx-ihezCztcUlWxoN4lpdb6hfEGIsyj2mr0Kx40xK0TuNYdkMEdQ9xLbbW7VpY5nKiVPpiMDQ%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Forwelldevcpp%2Ffiles%2Flatest%2Fdownload"
 ENTER
 STRING $output = "$env:USERPROFILE\Downloads\Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe"
@@ -59,4 +44,18 @@ ENTER
 STRING Set-Location -Path $destination
 ENTER
 STRING Start-Process -FilePath ".\Python-3.10.15.tgz"
+ENTER
+
+STRING $url = "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64"
+ENTER
+STRING $output = "$env:USERPROFILE\Downloads\DiscordSetup.exe"
+ENTER
+STRING $destination = "$env:USERPROFILE\Downloads"
+ENTER
+STRING (New-Object System.Net.WebClient).DownloadFile($url, $output)
+ENTER
+DELAY 1000
+STRING Set-Location -Path $destination
+ENTER
+STRING Start-Process -FilePath ".\DiscordSetup.exe"
 ENTER
